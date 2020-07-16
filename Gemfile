@@ -17,6 +17,13 @@ gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
+# Added gems
+gem 'materialize-sass', '~> 1.0'
+gem 'better_errors', '~> 2.7', '>= 2.7.1'
+gem 'sassc-rails', '>= 2.1.0'
+# gem 'simple_form', '~> 5.0', '>= 5.0.2'
+gem 'gravatar_image_tag', '~> 1.2'
+# --------------------------------------
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
