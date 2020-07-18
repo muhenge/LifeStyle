@@ -16,6 +16,7 @@ class ArticlesController < ApplicationController
     @article.update(article_params)
     redirect_to articles_path
   end
+
   def new
     @article = Article.new
   end

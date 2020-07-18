@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     if @current_user
       flash.notice = 'logged in'
       session[:auth] = @current_user
-      redirect_to new_user_path
+      redirect_to articles_path
     else
       flash.notice = 'Incorrect username'
       redirect_to new_session_path

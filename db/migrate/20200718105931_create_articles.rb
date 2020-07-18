@@ -1,10 +1,11 @@
 class CreateArticles < ActiveRecord::Migration[6.0]
   def change
     create_table :articles do |t|
+      t.integer :authorid
       t.string :title
-      t.text :body
+      t.text :text
       t.string :image
-      t.integer :author_id
+      
 
       t.timestamps
     end

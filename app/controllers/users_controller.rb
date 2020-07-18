@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      flash.notice = 'User created'
+      #flash.notice = 'User created'
       session[:auth] = @user
       redirect_to new_user_path
     else
@@ -17,9 +17,6 @@ class UsersController < ApplicationController
     end
   end
 
-
-  def show
-    @events = current_user.events
-  end
+  def show; end
 
 end

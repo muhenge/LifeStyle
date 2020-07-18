@@ -5,6 +5,9 @@ ruby '2.7.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
+# Use sqlite 3 for development
+gem 'sqlite3', '~> 1.4'
+
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
@@ -22,7 +25,8 @@ gem 'materialize-sass', '~> 1.0'
 gem 'better_errors', '~> 2.7', '>= 2.7.1'
 gem 'sassc-rails', '>= 2.1.0'
 # gem 'simple_form', '~> 5.0', '>= 5.0.2'
-gem 'gravatar_image_tag', '~> 1.2'
+#gem 'gravatar_image_tag', '~> 1.2'
+gem 'acts_as_votable', '~> 0.12.1'
 # --------------------------------------
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
