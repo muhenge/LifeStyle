@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-  include SessionsHelper
   def login
     @user = User.new
   end
@@ -9,7 +8,7 @@ class SessionsController < ApplicationController
     if @current_user
       flash.notice = 'logged in'
       session[:auth] = @current_user
-      redirect_to articles_path
+      redirect_to new_article_path
     else
       flash.notice = 'Incorrect username'
       redirect_to new_session_path
@@ -22,4 +21,9 @@ class SessionsController < ApplicationController
     flash.notice = 'logged out'
   end
 
+  private
+
+  def user_params
+    params.require(:user).permit(:username)
+  end
 end

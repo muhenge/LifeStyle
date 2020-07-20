@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   before_action :set_article,  only: [:show, :edit, :update, :destroy]
   before_action :current_user
   def index
-    @articles = Article.all
+    @articles = Article.all.ordered_by_most_recent
   end
 
   def show
@@ -16,7 +16,6 @@ class ArticlesController < ApplicationController
     @article.update(article_params)
     redirect_to articles_path
   end
-
   def new
     @article = Article.new
   end
@@ -34,4 +33,6 @@ class ArticlesController < ApplicationController
     Article.find(params[:id]).destroy
     redirect_to articles_path
   end
+
+
 end

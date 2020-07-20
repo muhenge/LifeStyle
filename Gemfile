@@ -5,11 +5,8 @@ ruby '2.7.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
-# Use sqlite 3 for development
+# Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
-
-# Use postgresql as the database for Active Record
-gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -20,19 +17,21 @@ gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
-# Added gems
-gem 'materialize-sass', '~> 1.0'
-gem 'better_errors', '~> 2.7', '>= 2.7.1'
-gem 'sassc-rails', '>= 2.1.0'
-# gem 'simple_form', '~> 5.0', '>= 5.0.2'
-#gem 'gravatar_image_tag', '~> 1.2'
-gem 'acts_as_votable', '~> 0.12.1'
-# --------------------------------------
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'materialize-sass', '~> 1.0'
+gem 'better_errors', '~> 2.7', '>= 2.7.1'
+gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
+gem 'gravatar_image_tag', '~> 1.2'
+gem 'sassc-rails', '>= 2.1.0'
+gem 'jquery-rails'
+gem 'carrierwave', '~> 2.1'
 
+# gem 'simple_form', '~> 5.0', '>= 5.0.2'
+gem 'gravatar_image_tag', '~> 1.2'
+gem 'jquery-rails'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

@@ -1,4 +1,7 @@
 class Article < ApplicationRecord
-  belongs_to :author, class_name: 'User', foreign_key: 'authorid'
-  has_many :category
+  validates :title, presence: true
+  validates :text, presence: true
+  #belongs_to :user
+  has_one_attached :image
+  scope :ordered_by_most_recent, -> { order(created_at: :desc) }
 end
